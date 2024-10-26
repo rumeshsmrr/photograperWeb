@@ -22,10 +22,10 @@
     z-index: 1;
     color: white;
     line-height: 1.2;
-    top: 45%;
+    top: 20%;
     transform: translateY(-50%);
     opacity: 0.6;
-    letter-spacing: 5px; /* Adjust this as needed */
+    letter-spacing: 20px; /* Adjust this as needed */
 }
 
 .categoryOverlay {
@@ -48,4 +48,11 @@
     position: absolute;
     top: -20px;
     right: 0px;
+}
+.categoryItem{
+    list-style: none;
+    text-decoration: none;
+}
+.categoryItem:hover{
+    letter-spacing: 10px;
 }
