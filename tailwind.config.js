@@ -15,7 +15,7 @@ export default {
       colors: {
         primaryWhite: '#fffff',      // Custom primary color
         blackBlue: '#1B1C1F',    // Custom secondary color
-        accent: '#F59E0B',       // Custom accent color
+        accent: '#e2b659',       // Custom accent color
         LightBlackBlue: '#2D2F33',   // Background color
         textPrimary: '#1B1C1F',  // Text primary color
         textSecondary: '#F59E0B', // Text secondary color

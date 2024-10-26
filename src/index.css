@@ -31,5 +31,17 @@
   }
  
  
-  /* Add more fonts as needed */
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:#e2b659 ;/* Color of the scrollbar handle */
+  border-radius: 10px; /* Roundness of the scrollbar handle */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the scrollbar track transparent */
+}
   
