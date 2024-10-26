@@ -1,0 +1,51 @@
+.bgVideoLanding {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.videoBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.textOverlay {
+    position: relative;
+    left:80px;
+    z-index: 1;
+    color: white;
+    line-height: 1.2;
+    top: 45%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    letter-spacing: 5px; /* Adjust this as needed */
+}
+
+.categoryOverlay {
+    position: absolute; /* Ensure it's positioned relative to bgVideoLanding */
+    right: 80px;         /* Move it 5px from the left */
+    bottom: 80px;       /* Move it 5px from the bottom */
+    z-index: 2;       /* Ensure it appears above the video */
+    color: white;
+    text-align: right; 
+    letter-spacing: 5px;/* Align text to the right */
+}
+
+.shape5 {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+}
+
+.shape6 {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}

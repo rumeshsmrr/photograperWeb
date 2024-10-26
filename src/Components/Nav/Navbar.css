@@ -1,0 +1,179 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: fixed;
+  color: black;
+  z-index: 8; /* Higher z-index */
+
+ 
+}
+.logo{
+  width: auto;
+  height: 40px;
+}
+.whiteBar {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 10px;
+  z-index: 100; /* Very high z-index to always be on top */
+}
+
+.middleNav {
+  width: 25%;
+height: 50px;
+  background-color: transparent;
+  margin-top: 0;
+
+
+  z-index: 5; /* Lower z-index than navPart1 and navPart2 */
+  position: relative;
+   /* Ensure position is set to relative or absolute for z-index to work */
+}
+
+.navPart1 {
+  display: flex;
+ /* Added to ensure z-index works */
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0px 20px 0;
+  
+  width: 60%;
+  padding: 1rem 2rem;
+  height: 72px;
+  color: black;
+  z-index: 10; /* Higher than middleNav */
+  margin-top: 0;
+}
+
+.navPart2 {
+  border-radius: 0 0px 0px 20px;
+
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 72px;
+  z-index: 10; /* Higher than middleNav */
+}
+
+
+
+.navbar-links {
+  list-style: none;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  gap: 1.5rem;
+}
+.navbar-links li{
+  cursor: pointer;
+}
+
+.navbar-links li a:hover{
+  text-decoration: underline;
+  color: #ee7f53;
+}
+.navbar-links li:hover{
+  color: #00031d;
+  font-weight: bold;
+}
+
+.contact-btn {
+ 
+  padding: 0.5rem 1rem;
+  border: none;
+  width: 200px;
+  height: fit-content;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid rgb(36, 36, 36);
+}
+
+.contact-btn:hover {
+  background-color: #dd9a36;
+  color: white;
+}
+#curved-corner-bottomleft,
+#curved-corner-bottomright,
+#curved-corner-topleft,
+#curved-corner-topright {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+}
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before,
+#curved-corner-topleft:before,
+#curved-corner-topright:before {
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+}
+#curved-corner-bottomleft:before {
+  bottom: 0;
+  left: 0;
+  box-shadow: -20px 20px 0 0 rgb(255, 255, 255);
+}
+#curved-corner-bottomright:before {
+  bottom: 0;
+  right: 0;
+  box-shadow: 20px 20px 0 0 rgb(255, 255, 255);
+}
+#curved-corner-topleft:before {
+  top: 0;
+  left: 0;
+  box-shadow: -20px -20px 0 0 rgb(255, 255, 255);
+}
+#curved-corner-topright:before {
+  top: 0;
+  right: 0;
+  box-shadow: 20px -20px 0 0 rgb(255, 255, 255);
+}
+
+.shape1{
+  position: absolute;
+  top:10px;
+  left: 0;
+ 
+  
+}
+
+.shape2{
+  position: absolute;
+  top: 10px;
+  right: 0px;
+ 
+  
+}
+.arrowIcon3{
+  font-size: 50px;
+  color: #00031d;
+  transition: 0.3s;
+  rotate: -45deg;
+}
+
+.arrowIcon3:hover{
+  color: #ee7f53;
+}
+
+.shape3{
+  position: absolute;
+  bottom: -20px;
+  left: 8px;
+  
+}
+.shape4{
+  position: absolute;
+  bottom: -20px;
+  right: 8px;
+  
+}
