@@ -90,8 +90,8 @@
 #curved-corner-bottomright,
 #curved-corner-topleft,
 #curved-corner-topright {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   overflow: hidden;
   position: relative;
 }
@@ -111,25 +111,25 @@
 #curved-corner-bottomleft:before {
   bottom: 0;
   left: 0;
-  box-shadow: -20px 20px 0 0 rgb(255, 255, 255);
+  box-shadow: -24px 24px 0 0 rgb(255, 255, 255);
 }
 
 #curved-corner-bottomright:before {
   bottom: 0;
   right: 0;
-  box-shadow: 20px 20px 0 0 rgb(255, 255, 255);
+  box-shadow: 24px 24px 0 0 rgb(255, 255, 255);
 }
 
 #curved-corner-topleft:before {
   top: 0;
   left: 0;
-  box-shadow: -20px -20px 0 0 rgb(255, 255, 255);
+  box-shadow: -24px -24px 0 0 rgb(255, 255, 255);
 }
 
 #curved-corner-topright:before {
   top: 0;
   right: 0;
-  box-shadow: 20px -20px 0 0 rgb(255, 255, 255);
+  box-shadow: 24px -24px 0 0 rgb(255, 255, 255);
 }
 
 .shape1 {
@@ -146,12 +146,12 @@
 
 .shape3 {
   position: absolute;
-  bottom: -20px;
+  bottom: -24px;
   left: 8px;
 }
 
 .shape4 {
   position: absolute;
-  bottom: -20px;
-  right: 8px;
+  bottom: -24px;
+    right: 8px;
 }

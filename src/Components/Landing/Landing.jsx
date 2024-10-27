@@ -33,7 +33,7 @@ export default function Landing() {
          <motion.div
           className="textOverlay font-compressed text-[90px] flex items-end"
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 100, opacity:0.8}}
+          animate={{ x: 0, opacity:0.8}}
           transition={{ duration: 0.5, delay:0 }}
         >
           Let's <br />
