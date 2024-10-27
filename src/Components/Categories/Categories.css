@@ -1,0 +1,17 @@
+.cardCorner{
+    padding: 0px 0px 10px 10px;
+  border-radius: 0px 0px 0px 24px;
+
+}
+
+.shape7{
+    position: absolute;
+    top: 0px;
+    left: -24px;
+}
+
+.shape8{
+  position: absolute;
+  bottom: -24px;
+  right: 0px;
+}
