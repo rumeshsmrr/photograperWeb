@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         regular: ['regular', 'sans-serif'],
-        compressed: ['compressed', 'sans-serif'],
+        stylish: ['stylish', 'sans-serif'],
         bold: ['bold', 'sans-serif'],
         boldq: ['boldq', 'sans-serif'],
       },
