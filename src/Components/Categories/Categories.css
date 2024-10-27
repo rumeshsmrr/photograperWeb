@@ -15,7 +15,10 @@
   bottom: -24px;
   right: 0px;
 }
-.categories-container {
+
+
+/* slider  */
+/* .categories-container {
   display: flex;
   align-items: center;
   position: relative;
@@ -49,6 +52,6 @@
 
 .catCard.active {
   opacity: 1;
-}
+} */
 
 

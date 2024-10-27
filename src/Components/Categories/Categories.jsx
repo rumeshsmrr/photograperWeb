@@ -1,85 +1,110 @@
-import React from 'react'
-import './Categories.css'
+import React from 'react';
+import './Categories.css';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import cat1 from '../../assets/images/catImg1.jpeg'
-import cat2 from '../../assets/images/catImg2.png'
-import cat3 from '../../assets/images/catImg3.png'
+import cat1 from '../../assets/images/catImg1.jpeg';
+import cat2 from '../../assets/images/catImg2.png';
+import cat3 from '../../assets/images/catImg3.png';
+import { motion } from 'framer-motion';
+
 export default function Categories() {
   return (
-    <div className='pt-2 pl-10 pr-10 pb-10 absolute bg-inherit w-full h-full flex flex-col justify-center'>
-        <div className='font-regular text-[60px]  titleLineSpace'>
-        Explore our <br/> photography <span className="text-accent">genres
-        </span>
-        </div>
-        <div className='w-100 flex justify-between mt-10 '>
-            <div className='w-[500px] h-[600px] relative catCard  '>
-                <img className='rounded-3xl 'src={cat1} />
-                <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
-                  <IoArrowForwardCircleOutline className='-rotate-45'/>
-                  <div className='shape7'>
-                    <div id="curved-corner-topright"></div>
-                  </div>
-                  <div className='shape8'>
-                  <div id="curved-corner-topright"></div>
-                  </div>
-                </div>
-                <div className='catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute -bottom-2 rounded-tr-3xl'>
-                  <div className='absolute -top-6 left-0'>
-                  <div id="curved-corner-bottomleft"></div>
-                  </div>
-                  <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Wedding</div>
-                  <div className='absolute bottom-[2px] -right-6'>
-                  <div id="curved-corner-bottomleft"></div>
-                  </div>
-                </div>
-            </div>
-            <div className='w-[500px] h-[600px] relative catCard '>
-                <img className='rounded-3xl w-full h-full 'src={cat2} />
-                <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent flex justify-end gap-2 items-center'>
-                <div className=' pt-0 pb-0 pl-1 pr-2 w-fit bg-white'>
-                 
-               
-                  <div className='font-regular text-xl py-1 text-accent bg-white  border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Portrait</div>
-                 
-                </div>
-                  <IoArrowForwardCircleOutline className='-rotate-45 '/>
-                  <div className='shape7'>
-                    <div id="curved-corner-topright"></div>
-                  </div>
-                  <div className='shape8'>
-                  <div id="curved-corner-topright"></div>
-                  </div>
-                </div>
-               
-            </div>
-            <div className='w-[500px] h-[600px] relative catCard  '>
-                <img className='rounded-3xl 'src={cat3} />
-                <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
-                  <IoArrowForwardCircleOutline className='-rotate-45'/>
-                  <div className='shape7'>
-                    <div id="curved-corner-topright"></div>
-                  </div>
-                  <div className='shape8'>
-                  <div id="curved-corner-topright"></div>
-                  </div>
-                </div>
-                <div className='catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute -bottom-2 right-0 rounded-tl-3xl'>
-                  <div className='absolute -top-6 right-0'>
-                  <div id="curved-corner-bottomright"></div>
-                  </div>
-                  <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Landscape</div>
-                  <div className='absolute bottom-[2px] -left-6'>
-                  <div id="curved-corner-bottomright"></div>
-                  </div>
-                </div>
-            </div>
-          
-            
-        </div>
+    <div className='pt-2 pl-10 pr-10 mt-10 bg-inherit w-full h-full flex flex-col justify-center'>
+      {/* Title with whileInView animation */}
+      <motion.div
+        className='font-regular text-[60px] mb-10 titleLineSpace'
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity:1}}
+        transition={{ duration: 0.5, delay: 0 }}
+      >
+        Explore our <br /> photography <span className="text-accent">genres</span>
+      </motion.div>
+      
+      <div className='w-100 flex justify-between mt-10 mb-20'>
+        {/* Image cards */}
+        <motion.div className='w-[500px] h-[600px] relative catCard'
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+      
+        transition={{ duration: 0.5, delay: 0.5}}
+        >
+          <img className='rounded-3xl ' src={cat1} />
+          <motion.div
+            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: [0, 0.8, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
+          <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
+            <IoArrowForwardCircleOutline className='-rotate-45' />
+            <div className='shape7'><div id="curved-corner-topright"></div></div>
+            <div className='shape8'><div id="curved-corner-topright"></div></div>
+          </div>
+          <div className='catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute -bottom-2 rounded-tr-3xl'>
+            <div className='absolute -top-6 left-0'><div id="curved-corner-bottomleft"></div></div>
+            <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Wedding</div>
+            <div className='absolute bottom-[2px] -right-6'><div id="curved-corner-bottomleft"></div></div>
+          </div>
+        </motion.div>
         
+        {/* Additional cards */}
+        <motion.div className='w-[500px] h-[600px] relative catCard'
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+       
+        transition={{ duration: 0.5, delay: 1 }}
+        >
+          <img className='rounded-3xl w-[500px] h-[600px]' src={cat2} />
+          <motion.div
+            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: [0, 0.8, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
+          <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent flex justify-end gap-2 items-center'>
+            <div className='pt-0 pb-0 pl-1 pr-2 w-fit bg-white'>
+              <div className='font-regular text-xl py-1 text-accent bg-white border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Portrait</div>
+            </div>
+            <IoArrowForwardCircleOutline className='-rotate-45' />
+            <div className='shape7'><div id="curved-corner-topright"></div></div>
+            <div className='shape8'><div id="curved-corner-topright"></div></div>
+          </div>
+        </motion.div>
+        
+        <motion.div className='w-[500px] h-[600px] relative catCard'
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+       
+        transition={{ duration: 0.5, delay: 1.5 }}
+        >
+          <img className='rounded-3xl '    src={cat3} />
+          <motion.div
+            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: [0, 0.8, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
+          <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
+            <IoArrowForwardCircleOutline className='-rotate-45' />
+            <div className='shape7'><div id="curved-corner-topright"></div></div>
+            <div className='shape8'><div id="curved-corner-topright"></div></div>
+          </div>
+          <div className='catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute -bottom-2 right-0 rounded-tl-3xl'>
+            <div className='absolute -top-6 right-0'><div id="curved-corner-bottomright"></div></div>
+            <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Landscape</div>
+            <div className='absolute bottom-[2px] -left-6'><div id="curved-corner-bottomright"></div></div>
+          </div>
+        </motion.div>
+      </div>
     </div>
-  )
+  );
 }
+
 //sliding
 
 // import React, { useState, useEffect, useRef } from 'react';
