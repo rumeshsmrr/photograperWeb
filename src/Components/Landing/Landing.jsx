@@ -31,7 +31,7 @@ export default function Landing() {
         </motion.div>  */}
          
          <motion.div
-          className="textOverlay font-stylish text-[80px] flex items-end"
+          className="textOverlay font-stylish text-[100px] flex items-end"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity:0.8}}
           transition={{ duration: 0.5, delay:0 }}

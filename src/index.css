@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* src/index.css */s
+/* src/index.css */
 @font-face {
     font-family: 'regular';
     src: url('./assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
@@ -16,7 +16,7 @@
     font-weight: normal;
     font-style: normal;
   }
-
+ 
   @font-face {
     font-family: 'bold';
     src: url('./assets/fonts/LibreBaskerville-Bold.ttf') format('truetype');
