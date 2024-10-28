@@ -21,7 +21,7 @@ export default function Categories() {
       
       <div className='w-100 flex justify-between mt-10 mb-20'>
         {/* Image cards */}
-        <motion.div className='w-[500px] h-[600px] relative catCard'
+        <motion.div className='w-[500px] h-[600px] relative catCard cursor-pointer'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
       
@@ -37,7 +37,7 @@ export default function Categories() {
             }}
           />
           <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
-            <IoArrowForwardCircleOutline className='-rotate-45' />
+            <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
             <div className='shape7'><div id="curved-corner-topright"></div></div>
             <div className='shape8'><div id="curved-corner-topright"></div></div>
           </div>
@@ -49,7 +49,7 @@ export default function Categories() {
         </motion.div>
         
         {/* Additional cards */}
-        <motion.div className='w-[500px] h-[600px] relative catCard'
+        <motion.div className='w-[500px] h-[600px] relative catCard cursor-pointer'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
        
@@ -68,13 +68,13 @@ export default function Categories() {
             <div className='pt-0 pb-0 pl-1 pr-2 w-fit bg-white'>
               <div className='font-regular text-xl py-1 text-accent bg-white border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Portrait</div>
             </div>
-            <IoArrowForwardCircleOutline className='-rotate-45' />
+            <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
             <div className='shape7'><div id="curved-corner-topright"></div></div>
             <div className='shape8'><div id="curved-corner-topright"></div></div>
           </div>
         </motion.div>
         
-        <motion.div className='w-[500px] h-[600px] relative catCard'
+        <motion.div className='w-[500px] h-[600px] relative catCard cursor-pointer'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
        
@@ -90,7 +90,7 @@ export default function Categories() {
             }}
           />
           <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
-            <IoArrowForwardCircleOutline className='-rotate-45' />
+            <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
             <div className='shape7'><div id="curved-corner-topright"></div></div>
             <div className='shape8'><div id="curved-corner-topright"></div></div>
           </div>
