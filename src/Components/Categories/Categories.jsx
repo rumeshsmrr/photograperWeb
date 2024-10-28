@@ -11,7 +11,7 @@ export default function Categories() {
     <div className='pt-2 pl-10 pr-10 mt-10  bg-inherit w-full h-screen flex flex-col justify-center '>
       {/* Title with whileInView animation */}
       <motion.div
-        className='font-regular text-[50px] mb-10 titleLineSpace'
+        className='font-regular text-[55px] mb-10 titleLineSpace'
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity:1}}
         transition={{ duration: 0.5, delay: 0 }}

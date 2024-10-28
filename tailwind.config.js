@@ -7,10 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        regular: ['regular', 'sans-serif'],
-        stylish: ['stylish', 'sans-serif'],
-        bold: ['bold', 'sans-serif'],
+        regular: ['regular', 'serif'],
+        stylish: ['stylish', 'serif'],
+        bold: ['bold', 'serif'],
         boldq: ['boldq', 'sans-serif'],
+        simple:['simple','sans-serif']
       },
       colors: {
         primaryWhite: '#fffff',      // Custom primary color

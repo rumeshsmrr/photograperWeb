@@ -1,5 +1,10 @@
-.serviceImg{
+.serviceImg {
     background-repeat: repeat;
-    opacity:0.5;
-     /* background-position-y:-50px;  */
+    opacity: 0.5;
 }
+
+.serviceDes:hover{
+    background-color: #0008186b;
+   
+}
+/* Add any other custom styles if needed */
