@@ -25,7 +25,7 @@
   }
   @font-face {
     font-family: 'boldq';
-    src: url('./assets/fonts/Helvetica-BoldOblique.ttf') format('truetype');
+    src: url('./assets/fonts/helvetica-compressed.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }

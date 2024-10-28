@@ -8,10 +8,10 @@ import { motion } from 'framer-motion';
 
 export default function Categories() {
   return (
-    <div className='pt-2 pl-10 pr-10 mt-10 bg-inherit w-full h-full flex flex-col justify-center'>
+    <div className='pt-2 pl-10 pr-10 mt-10  bg-inherit w-full h-screen flex flex-col justify-center '>
       {/* Title with whileInView animation */}
       <motion.div
-        className='font-regular text-[60px] mb-10 titleLineSpace'
+        className='font-regular text-[50px] mb-10 titleLineSpace'
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity:1}}
         transition={{ duration: 0.5, delay: 0 }}
@@ -19,14 +19,14 @@ export default function Categories() {
         Explore our <br /> photography <span className="text-accent">genres</span>
       </motion.div>
       
-      <div className='w-100 flex justify-between mt-10 mb-20'>
+      <div className='w-100 flex justify-between h-fit  '>
         {/* Image cards */}
-        <motion.div className='w-[500px] h-[600px] relative catCard cursor-pointer'
+        <motion.div className='w-[450px] h-[550px] relative catCard cursor-pointer'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5}}
         >
-          <img className='rounded-3xl h-full w-full' src={cat1} />
+          <img className='rounded-3xl w-full h-full' src={cat1} />
           <motion.div
             className='absolute inset-0 bg-white opacity-0 h-[full]'
             initial={{ opacity: 0 }}
@@ -40,15 +40,15 @@ export default function Categories() {
             <div className='shape7'><div id="curved-corner-topright"></div></div>
             <div className='shape8'><div id="curved-corner-topright"></div></div>
           </div>
-          <div className='catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute -bottom-2 rounded-tr-3xl'>
+          <div className='catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute bottom-0 rounded-tr-3xl'>
             <div className='absolute -top-6 left-0'><div id="curved-corner-bottomleft"></div></div>
             <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Wedding</div>
-            <div className='absolute bottom-[7px] -right-6'><div id="curved-corner-bottomleft"></div></div>
+            <div className='absolute bottom-0 -right-6'><div id="curved-corner-bottomleft"></div></div>
           </div>
         </motion.div>
         
         {/* Additional cards */}
-        <motion.div className='w-[500px] h-[600px] relative catCard cursor-pointer'
+        <motion.div className='w-[450px] h-[550px] relative catCard cursor-pointer'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
        
@@ -56,7 +56,7 @@ export default function Categories() {
         >
           <img className='rounded-3xl h-full w-full' src={cat2} />
           <motion.div
-            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            className='absolute inset-0 bg-white opacity-0 h-full'
             initial={{ opacity: 0 }}
             whileHover={{
               opacity: [0, 0.8, 0],
@@ -73,7 +73,7 @@ export default function Categories() {
           </div>
         </motion.div>
         
-        <motion.div className='w-[500px] h-[600px] relative catCard cursor-pointer'
+        <motion.div className='w-[450px] h-[550px] relative catCard cursor-pointer'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
        
@@ -81,7 +81,7 @@ export default function Categories() {
         >
           <img className='rounded-3xl h-full w-full'    src={cat3} />
           <motion.div
-            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            className='absolute inset-0 bg-white opacity-0 h-fit]'
             initial={{ opacity: 0 }}
             whileHover={{
               opacity: [0, 0.8, 0],
@@ -93,10 +93,10 @@ export default function Categories() {
             <div className='shape7'><div id="curved-corner-topright"></div></div>
             <div className='shape8'><div id="curved-corner-topright"></div></div>
           </div>
-          <div className='catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute -bottom-2 right-0 rounded-tl-3xl'>
+          <div className='catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute bottom-0 right-0 rounded-tl-3xl'>
             <div className='absolute -top-6 right-0'><div id="curved-corner-bottomright"></div></div>
             <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Landscape</div>
-            <div className='absolute bottom-[7px] -left-6'><div id="curved-corner-bottomright"></div></div>
+            <div className='absolute bottom-0 -left-6'><div id="curved-corner-bottomright"></div></div>
           </div>
         </motion.div>
       </div>
