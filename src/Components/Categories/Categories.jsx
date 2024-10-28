@@ -80,7 +80,7 @@ export default function Categories() {
        
         transition={{ duration: 0.5, delay: 1.5 }}
         >
-          <img className='rounded-3xl '    src={cat3} />
+          <img className='rounded-3xl w-[500px] h-[600px]'    src={cat3} />
           <motion.div
             className='absolute inset-0 bg-white opacity-0 h-[605px]'
             initial={{ opacity: 0 }}
