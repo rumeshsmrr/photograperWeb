@@ -24,12 +24,11 @@ export default function Categories() {
         <motion.div className='w-[500px] h-[600px] relative catCard cursor-pointer'
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-      
         transition={{ duration: 0.5, delay: 0.5}}
         >
-          <img className='rounded-3xl ' src={cat1} />
+          <img className='rounded-3xl h-full w-full' src={cat1} />
           <motion.div
-            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            className='absolute inset-0 bg-white opacity-0 h-[full]'
             initial={{ opacity: 0 }}
             whileHover={{
               opacity: [0, 0.8, 0],
@@ -44,7 +43,7 @@ export default function Categories() {
           <div className='catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute -bottom-2 rounded-tr-3xl'>
             <div className='absolute -top-6 left-0'><div id="curved-corner-bottomleft"></div></div>
             <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Wedding</div>
-            <div className='absolute bottom-[2px] -right-6'><div id="curved-corner-bottomleft"></div></div>
+            <div className='absolute bottom-[7px] -right-6'><div id="curved-corner-bottomleft"></div></div>
           </div>
         </motion.div>
         
@@ -80,7 +79,7 @@ export default function Categories() {
        
         transition={{ duration: 0.5, delay: 1.5 }}
         >
-          <img className='rounded-3xl w-[500px] h-[600px]'    src={cat3} />
+          <img className='rounded-3xl h-full w-full'    src={cat3} />
           <motion.div
             className='absolute inset-0 bg-white opacity-0 h-[605px]'
             initial={{ opacity: 0 }}
@@ -97,7 +96,7 @@ export default function Categories() {
           <div className='catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute -bottom-2 right-0 rounded-tl-3xl'>
             <div className='absolute -top-6 right-0'><div id="curved-corner-bottomright"></div></div>
             <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Landscape</div>
-            <div className='absolute bottom-[2px] -left-6'><div id="curved-corner-bottomright"></div></div>
+            <div className='absolute bottom-[7px] -left-6'><div id="curved-corner-bottomright"></div></div>
           </div>
         </motion.div>
       </div>
