@@ -33,7 +33,7 @@ export default function Landing() {
          <motion.div
           className="textOverlay font-stylish text-[100px] flex items-end"
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity:0.8}}
+          whileInView={{ x: 0, opacity:0.8}}
           transition={{ duration: 0.5, delay:0 }}
         >
           Let's <br />
@@ -53,7 +53,7 @@ export default function Landing() {
                 key={category}
                 className="categoryItem   hover:text-accent flex gap-2 items-center justify-end"  
                 initial={{ x: 100, opacity: 0}}
-                animate={{ x: 0, opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
               >
                 <span><FaArrowUp className='w-4 -rotate-45' /></span>{category} 
