@@ -7,7 +7,7 @@ const categories = ["Wedding", "Birthday", "Graduation", "Corporate"];
 
 export default function Landing() {
   return (
-    <div className='p-2 pb-0 mb-2'>
+    <div className='p-2 pb-0 mb-2 h-full'>
       <div className="bgVideoLanding">
         <video className="videoBackground" autoPlay loop muted>
           <source src={backgroundVideo} type="video/mp4" />

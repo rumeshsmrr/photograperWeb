@@ -1,7 +1,9 @@
-import React from 'react'
+
 import './Services.css'
-import serv1Img from "../../assets/images/service1.jpg"
-import serv2Img from '../../assets/images/service2.png'
+import serv1Img from "../../assets/images/service1Img.jpg"
+import serv2Img from '../../assets/images/service2Img.jpg'
+import serv3Img from '../../assets/images/service3new.jpg.png'
+import serv4Img from '../../assets/images/service4Img.jpg'
 import { motion } from 'framer-motion'
 
 export default function Services() {
@@ -16,23 +18,73 @@ export default function Services() {
         </span>
         </motion.div>
 
-        <motion.div className='w-full h-[175px] rounded-3xl text-end bg-slate-800 text-white text-3xl font-bold relative ' 
+        <motion.div className='w-full h-[175px] rounded-3xl text-end bg-slate-800 text-white text-[40px] font-boldq relative  cursor-pointer' 
         initial={{x: 100, opacity:0 }}
         whileInView={{x:0, opacity:1}}
         transition={{duration:0.5, delay:0.5}}
         >
-          <div className='w-100 h-full p-6 rounded-3xl bg-cover serviceImg' style={{backgroundImage:`url(${serv1Img})`}}></div>
+          <div className='w-100 h-full p-6 rounded-3xl bg-cover serviceImg bg-center' style={{backgroundImage:`url(${serv1Img})`}}></div>
+          <motion.div
+            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: [0, 0.8, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
           <div className='absolute top-6 right-6 tracking-widest'>WEDDING PHOTOGRAPHY</div>
          
         </motion.div>
 
-        <motion.div className='w-full h-[175px] rounded-3xl text-end bg-slate-800 text-white text-3xl font-bold relative mt-5' 
+        <motion.div className='w-full h-[175px] rounded-3xl text-end bg-slate-800 text-white text-[40px] font-boldq relative mt-5  cursor-pointer bg-center' 
         initial={{x: 100, opacity:0 }}
         whileInView={{x:0, opacity:1}}
-        transition={{duration:0.5, delay:0.5}}
+        transition={{duration:0.5, delay:1}}
         >
           <div className='w-100 h-full p-6 rounded-3xl bg-cover serviceImg' style={{backgroundImage:`url(${serv2Img})`}}></div>
+          <motion.div
+            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: [0, 0.8, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
           <div className='absolute top-6 left-6 tracking-widest'>PORTRAIT PHOTOGRAPHY</div>
+         
+        </motion.div>
+        <motion.div className='w-full h-[175px] rounded-3xl text-end bg-slate-800 text-white text-[40px] font-boldq relative mt-5  cursor-pointer' 
+        initial={{x: 100, opacity:0 }}
+        whileInView={{x:0, opacity:1}}
+        transition={{duration:0.5, delay:1.5}}
+        >
+          <div className='w-100 h-full p-6 rounded-3xl bg-cover serviceImg' style={{backgroundImage:`url(${serv3Img})`}}></div>
+          <motion.div
+            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: [0, 0.8, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
+          <div className='absolute top-6 right-6 tracking-widest'>EVENT PHOTOGRAPHY</div>
+         
+        </motion.div>
+        <motion.div className='w-full h-[175px] rounded-3xl text-end bg-slate-800 text-white text-[40px] font-boldq relative mt-5  cursor-pointer' 
+        initial={{x: 100, opacity:0 }}
+        whileInView={{x:0, opacity:1}}
+        transition={{duration:0.5, delay:1.5}}
+        >
+          <div className='w-100 h-full p-6 rounded-3xl bg-cover serviceImg' style={{backgroundImage:`url(${serv4Img})`}}></div>
+          <motion.div
+            className='absolute inset-0 bg-white opacity-0 h-[605px]'
+            initial={{ opacity: 0 }}
+            whileHover={{
+              opacity: [0, 0.8, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
+          <div className='absolute top-6 right-6 tracking-widest'>GRADUATION PHOTOGRAPHY</div>
          
         </motion.div>
     </div>
