@@ -8,101 +8,60 @@ import { motion } from 'framer-motion';
 
 export default function Categories() {
   return (
-    <div className='pt-2 pl-10 pr-10 mt-10  bg-inherit w-full h-screen flex flex-col justify-center '>
+    <div className='pt-2 px-4 md:px-10 mt-10 bg-inherit w-full  h-fit flex flex-col justify-center'>
       {/* Title with whileInView animation */}
       <motion.div
-        className='font-regular text-[55px] mb-10 titleLineSpace'
+        className='font-regular text-[30px] md:text-[55px] mb-10 titleLineSpace'
         initial={{ x: -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity:1}}
+        whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0 }}
       >
         Explore our <br /> photography <span className="text-accent">genres</span>
       </motion.div>
-      
-      <div className='w-100 flex justify-between h-fit  '>
-        {/* Image cards */}
-        <motion.div className='w-[450px] h-[550px] relative catCard cursor-pointer'
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5}}
-        >
-          <img className='rounded-3xl w-full h-full' src={cat1} />
-          <motion.div
-            className='absolute inset-0 bg-white opacity-0 h-[full]'
-            initial={{ opacity: 0 }}
-            whileHover={{
-              opacity: [0, 0.8, 0],
-              transition: { duration: 0.5 },
-            }}
-          />
-          <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
-            <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
-            <div className='shape7'><div id="curved-corner-topright"></div></div>
-            <div className='shape8'><div id="curved-corner-topright"></div></div>
-          </div>
-          <div className='catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute bottom-0 rounded-tr-3xl'>
-            <div className='absolute -top-6 left-0'><div id="curved-corner-bottomleft"></div></div>
-            <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Wedding</div>
-            <div className='absolute bottom-0 -right-6'><div id="curved-corner-bottomleft"></div></div>
-          </div>
-        </motion.div>
-        
-        {/* Additional cards */}
-        <motion.div className='w-[450px] h-[550px] relative catCard cursor-pointer'
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-       
-        transition={{ duration: 0.5, delay: 1 }}
-        >
-          <img className='rounded-3xl h-full w-full' src={cat2} />
-          <motion.div
-            className='absolute inset-0 bg-white opacity-0 h-full'
-            initial={{ opacity: 0 }}
-            whileHover={{
-              opacity: [0, 0.8, 0],
-              transition: { duration: 0.5 },
-            }}
-          />
-          <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent flex justify-end gap-2 items-center'>
-            <div className='pt-0 pb-0 pl-1 pr-2 w-fit bg-white'>
-              <div className='font-regular text-xl py-1 text-accent bg-white border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Portrait</div>
-            </div>
-            <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
-            <div className='shape7'><div id="curved-corner-topright"></div></div>
-            <div className='shape8'><div id="curved-corner-topright"></div></div>
-          </div>
-        </motion.div>
-        
-        <motion.div className='w-[450px] h-[550px] relative catCard cursor-pointer'
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-       
-        transition={{ duration: 0.5, delay: 1.5 }}
-        >
-          <img className='rounded-3xl h-full w-full'    src={cat3} />
-          <motion.div
-            className='absolute inset-0 bg-white opacity-0 h-fit]'
-            initial={{ opacity: 0 }}
-            whileHover={{
-              opacity: [0, 0.8, 0],
-              transition: { duration: 0.5 },
-            }}
-          />
-          <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent'>
-            <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
-            <div className='shape7'><div id="curved-corner-topright"></div></div>
-            <div className='shape8'><div id="curved-corner-topright"></div></div>
-          </div>
-          <div className='catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute bottom-0 right-0 rounded-tl-3xl'>
-            <div className='absolute -top-6 right-0'><div id="curved-corner-bottomright"></div></div>
-            <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Landscape</div>
-            <div className='absolute bottom-0 -left-6'><div id="curved-corner-bottomright"></div></div>
-          </div>
-        </motion.div>
+
+      {/* Responsive grid for cards */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-fit w-full'>
+        <CategoryCard image={cat1} title="Wedding" delay={0.5} />
+        <CategoryCard image={cat2} title="Portrait" delay={1} />
+        <CategoryCard image={cat3} title="Landscape" delay={1.5} />
       </div>
     </div>
   );
 }
+
+function CategoryCard({ image, title, delay }) {
+  return (
+    <div className='w-full flex flex-wrap gap-3 justify-center '>
+    <motion.div
+      className='relative catCard cursor-pointer w-[300px] md:w-[350px] lg:w-[400px] h-[350px] md:h-[450px] lg:h-[550px]'
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay }}
+    >
+      <img className='rounded-3xl w-full h-full object-cover' src={image} alt={title} />
+      <motion.div
+        className='absolute inset-0 bg-white opacity-0'
+        initial={{ opacity: 0 }}
+        whileHover={{
+          opacity: [0, 0.8, 0],
+          transition: { duration: 0.5 },
+        }}
+      />
+      <div className='cardCorner bg-white text-[30px] md:text-[50px] absolute top-0 right-0 text-accent'>
+        <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
+        <div className='shape7'><div id="curved-corner-topright"></div></div>
+        <div className='shape8'><div id="curved-corner-topright"></div></div>
+      </div>
+      <div className='catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute bottom-0 rounded-tr-3xl'>
+      <div className='absolute -top-6 left-0'><div id="curved-corner-bottomleft"></div></div>
+            <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>{title}</div>
+            <div className='absolute bottom-0 -right-6'><div id="curved-corner-bottomleft"></div></div>
+      </div>
+    </motion.div>
+    </div>
+  );
+}
+
 
 //sliding
 
