@@ -31,7 +31,7 @@ export default function Landing() {
         </motion.div>  */}
          
          <motion.div
-          className="textOverlay font-stylish text-[100px] flex items-end"
+          className="textOverlay font-stylish flex items-end"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity:0.8}}
           transition={{ duration: 0.5, delay:0 }}
@@ -39,8 +39,8 @@ export default function Landing() {
           Let's <br />
           create <br />
           your story <br />
-          together!<span><FaArrowUp className='w-10 rotate-45' /></span>
-        </motion.div> *
+          together!<span className='textOverlayImage'><FaArrowUp className='w-10 rotate-45' /></span>
+        </motion.div>
         
         <div className="categoryOverlay font-bold font-semibold text-white relative text-[20px] cursor-pointer opacity-75 text-right">
           <div className="w-fit p-2 flex flex-col gap-10">

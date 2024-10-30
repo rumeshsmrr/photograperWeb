@@ -26,6 +26,7 @@
     transform: translateY(-50%);
     opacity: 0.6;
     letter-spacing: 10px; /* Adjust this as needed */
+    font-size: 80px;
 }
 
 .categoryOverlay {
@@ -55,4 +56,43 @@
 }
 .categoryItem:hover{
     letter-spacing: 10px;
+}
+.textOverlayImage{
+    font-size: 80px;
+}
+@media screen and (max-width: 768px) {
+    .textOverlay {
+        font-size: 40px;
+        left: 20px;
+    }
+    .categoryOverlay {
+        right: 20px;
+        bottom: 20px;
+    }
+    .categoryItem{
+        font-size: 16px;
+    }
+    .textOverlayImage{
+        font-size: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .textOverlay {
+        font-size: 40px;
+        left: 20px;
+    }
+    .categoryOverlay {
+        right: 20px;
+        bottom: 20px;
+    }
+    .textOverlayImage{
+        font-size: 20px;
+    }
+
+    .categoryItem{
+        font-size: 12px;
+    }
+    
 }
