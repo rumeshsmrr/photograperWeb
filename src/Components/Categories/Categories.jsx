@@ -8,10 +8,10 @@ import { motion } from 'framer-motion';
 
 export default function Categories() {
   return (
-    <div className='pt-2 px-4 md:px-10 mt-10 bg-inherit w-full  h-screen flex flex-col justify-center'>
+    <div className='pt-2 px-4 md:px-10 mt-10 bg-inherit w-full  h-fit flex flex-col justify-center'>
       {/* Title with whileInView animation */}
       <motion.div
-        className='font-regular text-[30px] md:text-[40px] mb-10 titleLineSpace'
+        className='font-regular text-[30px] mb-10 titleLineSpace'
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0 }}
@@ -67,11 +67,11 @@ export default function Categories() {
           transition: { duration: 0.5 },
         }}
       />
-      <div className='cardCorner bg-white text-[50px] absolute top-0 right-0 text-accent flex justify-end gap-2 items-center'>
+      <div className='cardCorner bg-white  absolute top-0 right-0 text-accent flex justify-end gap-2 items-center'>
             <div className='pt-0 pb-0 pl-1 pr-2 w-fit bg-white'>
-              <div className='font-regular text-xl py-1 text-accent bg-white border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Portrait</div>
+              <div className='font-regular lg:text-xl md:text-lg sm:text-sm py-1 text-accent bg-white border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Portrait</div>
             </div>
-            <IoArrowForwardCircleOutline className='-rotate-45 hover:text-black' />
+            <IoArrowForwardCircleOutline className='-rotate-45 text-3xl hover:text-black' />
             <div className='shape7'><div id="curved-corner-topright"></div></div>
             <div className='shape8'><div id="curved-corner-topright"></div></div>
           </div>
@@ -101,7 +101,8 @@ export default function Categories() {
       </div>
       <div className='catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute bottom-0 right-0 rounded-tl-3xl'>
       <div className='absolute bottom-0 -left-6'><div id="curved-corner-bottomright"></div></div>
-            <div className='font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Wedding</div>
+            <div className='font-regular lg:text-xl md:text-lg sm:text-lg
+             text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl'>Landscape</div>
             <div className='absolute -top-6 right-0'><div id="curved-corner-bottomright"></div>
           </div>
       </div>
