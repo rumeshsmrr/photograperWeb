@@ -22,6 +22,13 @@ export default {
         textSecondary: '#F59E0B', // Text secondary color
         // Add more custom colors as needed
       },
+      screens: {
+        sm: '640px',
+        md: '768px', 
+        lg: '1200px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
     },
   },
   plugins: [],

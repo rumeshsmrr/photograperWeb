@@ -72,7 +72,7 @@ const data1 = [{
 ]
 export default function Services() {
   return (
-    <div className='pt-2 pl-10 pr-10 pb-10 mt-10 absolute bg-inherit w-full h-screen flex flex-col justify-center'>
+    <div className='pt-2 pl-10 pr-10 pb-10 mt-10 bg-inherit w-full h-screen flex flex-col justify-center'>
         <motion.div className='font-regular text-[30px] mb-4 titleLineSpace'
         initial={{x: -100 , opacity:0}}
         whileInView={{x:0, opacity:1}}

@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Nav */}
-      <nav className="navbar p-0 m-0 font-regular hidden md:flex">
+      <nav className="navbar p-0 m-0 font-regular hidden lg:flex">
         <div className="whiteBar"></div>
         <div className="navPart1 bg-white">
           <img className="logo" src={logo} alt="Logo" />
@@ -55,7 +55,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Nav */}
-      <nav className="mobileNav w-screen fixed z-10 flex justify-between h-fit items-center md:hidden bg-white">
+      <nav className="mobileNav w-screen fixed z-10 flex justify-between h-fit items-center lg:hidden bg-white">
         <div className="mobileNavPart1 w-2/4 h-[62px] bg-white p-3">
           <img className="logo" src={logo} alt="Logo" />
         </div>
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
         <div className="p-4 w-1/4 h-[62px] bg-white flex justify-center items-center">
           <div
-            className="mobileNavMenu m-auto cursor-pointer"
+            className="mobileNavMenu cursor-pointer"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           >
             <IoArrowDownCircleOutline
