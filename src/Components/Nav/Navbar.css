@@ -56,7 +56,7 @@
 
 .navbar-links {
   list-style: none;
-  width: 50%;
+
   display: flex;
   justify-content: space-between;
   font-size: 16px;
@@ -164,4 +164,5 @@
    display: contents;
   }
 
+  
 }

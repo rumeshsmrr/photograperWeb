@@ -29,7 +29,7 @@ export default function ServiceCard1({ title, price, features, image, index, del
           <p className="mt-1 flex items-baseline gap-x-2">
             <span className="text-xl font-simple tracking-tight mb-3 text-white">{price}</span>
           </p>
-          <ul role="list" className="mt-4 font-simple space-y-3  leading-6 text-gray-300 sm:mt-1">
+          <ul role="list" className="mt-4 font-simple space-y-3 text-start leading-6 text-gray-300 sm:mt-1">
             {features.map((feature) => (
               <li className="flex gap-x-3 items-start" key={feature}>
                 <IoArrowForwardCircleOutline className="text-accent -rotate-45 text-wrap text-sm" />
