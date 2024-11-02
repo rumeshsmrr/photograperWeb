@@ -7,6 +7,8 @@ import Landing from "./Components/Landing/Landing";
 import Navbar from "./Components/Nav/Navbar";
 import Reviews from "./Components/Reviews/Reviews";
 import Services from "./Components/Services/Services";
+import PhotoGrid from "./Components/PhtotGrid/PhotoGrid";
+import Aboutus from "./Components/AboutUs/Aboutus";
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
         <Navbar />
         <div>
           <Landing />
+          <PhotoGrid />
           <Categories />
           <Services />
           <Reviews />
+          <Aboutus />
           <ContactUs />
           <Footer />
         </div>
