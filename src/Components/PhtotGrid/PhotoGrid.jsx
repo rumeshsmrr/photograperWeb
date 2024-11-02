@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import img1 from "../../assets/images/photo1.jpg";
 import img2 from "../../assets/images/photo2.jpeg";
 import img3 from "../../assets/images/photo3.jpeg";
@@ -15,6 +16,8 @@ import img12 from "../../assets/images/photo12.png";
 import img14 from "../../assets/images/photo14.png";
 import img15 from "../../assets/images/photo15.jpg";
 import img16 from "../../assets/images/photo16.jpg";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   img1,
@@ -36,84 +39,57 @@ const cards = [
 
 export default function PhotoGrid() {
   const sliderRef = useRef(null);
-  const imagesToShow = 3; // Number of images to show at once
 
-  // Duplicate the first few images at the end and the last few at the beginning
-  const extendedCards = [
-    ...cards.slice(cards.length - imagesToShow),
-    ...cards,
-    ...cards.slice(0, imagesToShow),
-  ];
-
-  // Automatically move to the next set of images every 3 seconds
   useEffect(() => {
-    const scrollContainer = sliderRef.current;
+    const slider = sliderRef.current;
+    const totalWidth = slider.scrollWidth - slider.clientWidth;
 
-    const slide = () => {
-      if (scrollContainer) {
-        // Scroll by the width of the images to show
-        scrollContainer.scrollBy({
-          left: scrollContainer.offsetWidth / imagesToShow,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    const interval = setInterval(slide, 3000);
-
-    const handleScroll = () => {
-      // Check if scrolled to the end of the extended list
-      if (
-        scrollContainer.scrollLeft >=
-        scrollContainer.scrollWidth - scrollContainer.offsetWidth
-      ) {
-        // Disable smooth behavior to reset scroll position instantly
-        scrollContainer.style.scrollBehavior = "auto";
-        scrollContainer.scrollLeft = scrollContainer.offsetWidth / imagesToShow;
-        scrollContainer.style.scrollBehavior = "smooth";
-      }
-    };
-
-    scrollContainer.addEventListener("scroll", handleScroll);
+    if (window.innerWidth >= 768) {
+      gsap.to(slider, {
+        x: -totalWidth,
+        ease: "none",
+        scrollTrigger: {
+          trigger: slider,
+          start: "top-=150px top",
+          end: () => `+=${totalWidth * 0.9}`, // Adjusted end value to stop before all images are fully visible
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+    }
 
     return () => {
-      clearInterval(interval);
-      scrollContainer.removeEventListener("scroll", handleScroll);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [imagesToShow]);
+  }, []);
 
   return (
-    <div id="photoGrid" className="overflow-hidden mt-10 px-4 md:px-10">
-      <motion.div
-        className="font-regular text-[30px] mb-10 titleLineSpace"
-        initial={{ x: -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0 }}
-      >
+    <div
+      id="photoGrid"
+      className="overflow-hidden mt-10 px-4 md:px-10 relative"
+    >
+      <div className="font-regular text-[30px] mb-10 titleLineSpace">
         Showcasing our <br /> best
         <span className="text-accent"> work</span>
-      </motion.div>
+      </div>
 
-      <motion.div
-        ref={sliderRef}
-        className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0 }}
-      >
-        {extendedCards.map((img, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 w-[calc(100%/3-1rem)] h-[50vh] snap-start"
-          >
-            <img
-              src={img}
-              alt={`img${index + 1}`}
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-        ))}
-      </motion.div>
+      <div ref={sliderRef} className="flex gap-4 w-full">
+        {cards
+          .slice(0, window.innerWidth < 768 ? 3 : cards.length)
+          .map((img, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-[calc(100%/3-1rem)] h-[80vh]"
+            >
+              <img
+                src={img}
+                alt={`img${index + 1}`}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          ))}
+      </div>
     </div>
   );
 }
