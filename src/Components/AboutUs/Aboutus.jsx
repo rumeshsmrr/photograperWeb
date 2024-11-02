@@ -37,7 +37,12 @@ export default function Aboutus() {
       </video>
 
       {/* Overlay text */}
-      <h1 className="text-[200px] font-bold text-accent opacity-10 leading-none select-none absolute top-1/2 transform -translate-y-1/2">
+      <h1
+        className="text-[250px] font-bold bg-clip-text text-transparent opacity-5 leading-none select-none absolute top-1/2 transform -translate-y-1/2"
+        style={{
+          backgroundImage: "linear-gradient(45deg, #34322E, #e2b659)",
+        }}
+      >
         Hello
       </h1>
 
