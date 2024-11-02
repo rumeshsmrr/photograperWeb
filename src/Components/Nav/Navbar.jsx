@@ -125,7 +125,7 @@ const Navbar = () => {
           initial="closed"
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <ul className="text-center font-bold text-xl space-y-4">
+          <ul className="text-center font-bold text-xl space-y-4 flex flex-col justify-center items-center">
             {links.map((links) => (
               <Link
                 key={links.name}
