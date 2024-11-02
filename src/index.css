@@ -4,61 +4,60 @@
 
 /* src/index.css */
 @font-face {
-    font-family: 'regular';
-    src: url('./assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'stylish';
-    src: url('./assets/fonts/Suranna-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
- 
-  @font-face {
-    font-family: 'bold';
-    src: url('./assets/fonts/LibreBaskerville-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'boldq';
-    src: url('./assets/fonts/helvetica-compressed.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "regular";
+  src: url("./assets/fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'simple';
-    src: url('./assets/fonts/Helvetica.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "stylish";
+  src: url("./assets/fonts/Suranna-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
- 
- 
+@font-face {
+  font-family: "bold";
+  src: url("./assets/fonts/LibreBaskerville-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "boldq";
+  src: url("./assets/fonts/helvetica-compressed.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "simple";
+  src: url("./assets/fonts/Helvetica.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:#e2b659 ;/* Color of the scrollbar handle */
+  background-color: #e2b659; /* Color of the scrollbar handle */
   border-radius: 10px; /* Roundness of the scrollbar handle */
 }
 
 ::-webkit-scrollbar-track {
   background-color: transparent; /* Make the scrollbar track transparent */
 }
-  /* Hide horizontal scrollbar, keep vertical scrollbar */
-body, html {
-  overflow-x: hidden; /* Disable horizontal scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
+/* Hide horizontal scrollbar, keep vertical scrollbar */
+body,
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .container {
-  overflow-x: hidden; /* For specific container: hides horizontal scroll */
-  overflow-y: auto; /* Keeps vertical scroll */
+  overflow-x: hidden;
+  overflow-y: auto;
 }

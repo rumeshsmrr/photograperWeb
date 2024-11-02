@@ -1,12 +1,35 @@
-import './Navbar.css';
-import logo from '../../assets/images/logoo.png';
-import { motion } from 'framer-motion';
-import { IoArrowDownCircleOutline } from 'react-icons/io5';
-import { useState } from 'react';
+import "./Navbar.css";
+import logo from "../../assets/images/logoo.png";
+import { motion } from "framer-motion";
+import { IoArrowDownCircleOutline } from "react-icons/io5";
+import { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const categories = ["Home", "Products", "Pricing", "Our Shops"];
+
+  const links = [
+    {
+      name: "Home",
+      to: "#home",
+    },
+    {
+      name: "Services",
+      to: "#services",
+    },
+    {
+      name: "Categories",
+      to: "#categories",
+    },
+    {
+      name: "About Me",
+      to: "#about",
+    },
+    {
+      name: "Contact Us",
+      to: "#contact",
+    },
+  ];
 
   // Framer Motion animation variants for the menu
   const menuVariants = {
@@ -22,16 +45,17 @@ const Navbar = () => {
         <div className="navPart1 bg-white">
           <img className="logo" src={logo} alt="Logo" />
           <ul className="navbar-links font-bold">
-            {categories.map((category, index) => (
-              <motion.li
-                key={category}
-                className="linknav"
+            {links.slice(0, -1).map(({ name, to }, index) => (
+              <motion.a
+                key={name}
+                href={to}
+                className="link-nav"
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
               >
-                {category}
-              </motion.li>
+                {name}
+              </motion.a>
             ))}
           </ul>
         </div>
@@ -44,7 +68,12 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navPart2 bg-white">
-          <button className="contact-btn bg-blackBlue text-white hover:bg-accent">Contact Us</button>
+          <Link
+            to="#contact"
+            className="contact-btn bg-blackBlue text-white hover:bg-accent flex justify-center items-center"
+          >
+            Contact Us
+          </Link>
         </div>
         <div className="shape3">
           <div id="curved-corner-topleft"></div>
@@ -74,7 +103,7 @@ const Navbar = () => {
           >
             <IoArrowDownCircleOutline
               className={`text-3xl transform transition-transform duration-300 ${
-                isMobileMenuOpen ? 'rotate-180 text-accent' : 'rotate-45'
+                isMobileMenuOpen ? "rotate-180 text-accent" : "rotate-45"
               }`}
             />
           </div>
@@ -97,10 +126,14 @@ const Navbar = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <ul className="text-center font-bold text-xl space-y-4">
-            {categories.map((category) => (
-              <li key={category} className="cursor-pointer hover:text-accent">
-                {category}
-              </li>
+            {links.map((links) => (
+              <Link
+                key={links.name}
+                to={links.to}
+                className="cursor-pointer hover:text-accent"
+              >
+                {links.name}
+              </Link>
             ))}
           </ul>
         </motion.div>

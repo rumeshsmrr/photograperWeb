@@ -49,13 +49,6 @@ export default function Footer() {
         >
           About Us
         </Link>
-        <Link
-          smooth
-          to="#category"
-          className="text-xs text-white font-simple hover:text-accent cursor-pointer"
-        >
-          Category
-        </Link>
       </div>
     </div>
   );

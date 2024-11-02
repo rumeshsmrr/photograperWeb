@@ -5,6 +5,16 @@ import { FaFacebookF, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { TbBrandTelegram } from "react-icons/tb";
+
+const socialMediaLinks = [
+  { icon: <FaFacebookF />, id: "facebook" },
+  { icon: <CiInstagram />, id: "instagram" },
+  { icon: <FaWhatsapp />, id: "whatsapp" },
+  { icon: <FaXTwitter />, id: "twitter" },
+  { icon: <TbBrandTelegram />, id: "telegram" },
+  { icon: <FaTiktok />, id: "tiktok" },
+];
+
 export default function ContactUs() {
   return (
     <div
@@ -28,23 +38,15 @@ export default function ContactUs() {
             </div>
           </div>
           <div className="p-5 w-full grid grid-cols-3 sm:flex sm:justify-between h-fit gap-5">
-            <div className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center">
-              <FaFacebookF />
-            </div>
-            <div className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center">
-              <CiInstagram />
-            </div>
-            <div className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center">
-              <FaWhatsapp />
-            </div>
-            <div className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center">
-              <FaXTwitter />
-            </div>
-            <div className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center">
-              <TbBrandTelegram />
-            </div>
-            <div className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center">
-              <FaTiktok />
+            <div className="p-5 w-full grid grid-cols-3 sm:flex sm:justify-between h-fit gap-5">
+              {socialMediaLinks.map(({ icon, id }) => (
+                <div
+                  key={id}
+                  className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center cursor-pointer hover:bg-accent"
+                >
+                  {icon}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -60,7 +62,7 @@ export default function ContactUs() {
           Let's work
           <div className="flex justify-start gap-3 items-center h-[40px]">
             <div className="text-accent tracking-widest">together </div>
-            <IoArrowForwardCircleOutline className="text-accent text-4xl -rotate-45" />
+            <IoArrowForwardCircleOutline className="text-accent text-4xl -rotate-45 " />
           </div>
         </div>
         <div className="w-full h-fit flex justify-center items-center ">
@@ -71,10 +73,10 @@ export default function ContactUs() {
         </div>
         <div className="w-full flex justify-center">
           <div className="flex justify-between gap-2  w-10/12">
-            <div className="bg-blackBlue text-white py-2 rounded-3xl px-8 text-sm w-fit h-fit">
+            <div className="bg-blackBlue text-white py-2 rounded-3xl px-8 text-sm w-fit h-fit cursor-pointer hover:bg-accent">
               Call Us
             </div>
-            <div className="bg-blackBlue text-white py-2 rounded-3xl px-8 text-sm w-fit h-fit">
+            <div className="bg-blackBlue text-white py-2 rounded-3xl px-8 text-sm w-fit h-fit cursor-pointer hover:bg-accent">
               Email Us
             </div>
           </div>
