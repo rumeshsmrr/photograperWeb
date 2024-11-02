@@ -67,14 +67,14 @@ export default function PhotoGrid() {
   return (
     <div
       id="photoGrid"
-      className="overflow-hidden mt-10 px-4 md:px-10 relative"
+      className="overflow-hidden ml-2 mt-10 px-4 md:px-10 relative"
     >
       <div className="font-regular text-[30px] mb-10 titleLineSpace">
         Showcasing our <br /> best
         <span className="text-accent"> work</span>
       </div>
 
-      <div ref={sliderRef} className="flex gap-4 w-full">
+      <div ref={sliderRef} className="flex gap-4 ml-2 w-full">
         {cards
           .slice(0, window.innerWidth < 768 ? 3 : cards.length)
           .map((img, index) => (
