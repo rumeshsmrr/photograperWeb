@@ -37,17 +37,16 @@ export default function ContactUs() {
               <IoArrowForwardCircleOutline className="text-accent text-4xl -rotate-45" />
             </div>
           </div>
+
           <div className="p-5 w-full grid grid-cols-3 sm:flex sm:justify-between h-fit gap-5">
-            <div className="p-5 w-full grid grid-cols-3 sm:flex sm:justify-between h-fit gap-5">
-              {socialMediaLinks.map(({ icon, id }) => (
-                <div
-                  key={id}
-                  className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center cursor-pointer hover:bg-accent"
-                >
-                  {icon}
-                </div>
-              ))}
-            </div>
+            {socialMediaLinks.map(({ icon, id }) => (
+              <div
+                key={id}
+                className="w-[50px] h-[50px] rounded-full border-solid border-2 border-white text-white text-center items-center flex justify-center cursor-pointer hover:bg-accent"
+              >
+                {icon}
+              </div>
+            ))}
           </div>
         </div>
         <div className="w-1/3 h-full bg-slate-100 relative rounded-r-3xl personImg"></div>
