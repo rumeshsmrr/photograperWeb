@@ -49,24 +49,25 @@ export default function Aboutus() {
       {/* Content */}
       <div className="relative  flex flex-col items-center mt-8">
         <img
-          className="text-4xl md:text-5xl font-semibold italic text-gray-200"
+          className="text-4xl md:text-5xl font-semibold italic h-[100px] text-gray-200"
           src={logo}
           alt="Logo"
         />
         {/* Description Paragraph under Hello */}
-        <p className="relative  mt-[260px] text-l md:text-l max-w-2xl text-gray-300 px-4 text-center">
-          I'm Kaveeshwara Hearath, a passionate photographer dedicated to
-          capturing life's special moments. With 5 years of experience, I
-          specialize in portraits, events, and landscapes. My goal is to tell
-          unique stories through creative, emotive photography. I work closely
-          with clients to make every session personal and memorable. Let's
-          connect to create lasting memories!
+        <p className="relative mt-[50px] md:mt-[260px] mb-10px font-regular text-base md:text-xl tracking-widest max-w-5xl text-gray-300 px-4 text-center">
+          I am a passionate photographer with a keen artistic mind and an
+          enthusiasm for capturing and creating visual stories. My creative
+          journey is deeply influenced by my love for reading books and watching
+          movies, which inspire my approach to photography. These interests help
+          me stay connected to various storytelling techniques and visual
+          aesthetics, enriching my work and allowing me to bring a unique and
+          dynamic perspective to each project.
         </p>
 
         {/* Contact Button */}
         <Link
           to="#contact"
-          className="mt-4 px-8 py-2 border-2 border-gray-400 text-white rounded-full hover:bg-accent transition duration-300"
+          className="mt-4 px-8 py-2 border-2 font-regular font-semibold border-gray-400 text-white rounded-full hover:bg-accent transition duration-300 hover:text-blackBlue tracking-wider"
         >
           Contact Us
         </Link>

@@ -3,11 +3,11 @@ import backgroundVideo from "../../assets/video/protograpervideo.mp4";
 import { motion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
 
-const categories = ["Wedding", "Birthday", "Graduation", "Corporate"];
+const categories = ["Wedding", "Engagement ", "Birthday", "Graduation"];
 
 export default function Landing() {
   return (
-    <div id="home" className="p-2 pb-0 mb-2 h-screen w-screen">
+    <div id="home" className=" pb-0 pl-2 pr-2 h-screen w-screen">
       <div className="bgVideoLanding">
         <video className="videoBackground" autoPlay loop muted>
           <source src={backgroundVideo} type="video/mp4" />
@@ -69,12 +69,12 @@ export default function Landing() {
         </div>
       </div>
 
-      <div className="relative bottom-5 h-5 bg-white">
+      <div className="relative bottom-5 h-5 bg-bgDark">
         <div className="shape5">
-          <div id="curved-corner-bottomleft"></div>
+          <div id="curved-corner-bottomleft-dark"></div>
         </div>
         <div className="shape6">
-          <div id="curved-corner-bottomright"></div>
+          <div id="curved-corner-bottomright-dark"></div>
         </div>
       </div>
     </div>

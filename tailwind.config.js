@@ -9,6 +9,7 @@ export default {
         bold: ["bold", "serif"],
         boldq: ["boldq", "sans-serif"],
         simple: ["simple", "sans-serif"],
+        semiStyled: ["semiStyled", "sans-serif"],
       },
       colors: {
         primaryWhite: "#fffff", // Custom primary color
@@ -18,6 +19,8 @@ export default {
         textPrimary: "#1B1C1F", // Text primary color
         textSecondary: "#F59E0B", // Text secondary color
         textGrade: "#202124",
+        bgDark: "#2D2D2D",
+        secondAccent: "#E4E0E1",
       },
       screens: {
         sm: "640px",

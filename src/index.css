@@ -5,7 +5,8 @@
 /* src/index.css */
 @font-face {
   font-family: "regular";
-  src: url("./assets/fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +17,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "semiStyled";
+  src: url("./assets/fonts/LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 @font-face {
   font-family: "bold";
   src: url("./assets/fonts/LibreBaskerville-Bold.ttf") format("truetype");
@@ -55,6 +61,7 @@ body,
 html {
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: #2d2d2d;
 }
 
 .container {

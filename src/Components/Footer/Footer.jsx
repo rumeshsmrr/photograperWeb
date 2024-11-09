@@ -4,7 +4,8 @@ export default function Footer() {
   return (
     <div className="py-10 px-5 flex flex-col md:flex-row justify-between items-center bg-blackBlue">
       <div className="text-xs text-white font-simple">
-        @WebMinds 2024. All Rights Reserved. Developed By Rumesh Siriwardhana
+        @WebMinds 2024. All Rights Reserved. <br />
+        <span className="text-[10px]">Developed By Rumesh Siriwardhana</span>
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-4">
         <Link

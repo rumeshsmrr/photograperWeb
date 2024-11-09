@@ -1,98 +1,96 @@
 .bgVideoLanding {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .videoBackground {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .textOverlay {
-    position: relative;
-    left:80px;
-    z-index: 1;
-    color: white;
-    line-height: 1.2;
-    top: 20%;
-    transform: translateY(-50%);
-    opacity: 0.6;
-    letter-spacing: 10px; /* Adjust this as needed */
-    font-size: 80px;
+  position: relative;
+  left: 80px;
+  z-index: 1;
+  color: white;
+  line-height: 1.2;
+  top: 20%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  letter-spacing: 10px; /* Adjust this as needed */
+  font-size: 80px;
 }
 
 .categoryOverlay {
-    position: absolute; /* Ensure it's positioned relative to bgVideoLanding */
-    right: 80px;         /* Move it 5px from the left */
-    bottom: 80px;       /* Move it 5px from the bottom */
-    z-index: 2;       /* Ensure it appears above the video */
-    color: white;
-    text-align: right; 
-    letter-spacing: 5px;/* Align text to the right */
+  position: absolute; /* Ensure it's positioned relative to bgVideoLanding */
+  right: 80px; /* Move it 5px from the left */
+  bottom: 80px; /* Move it 5px from the bottom */
+  z-index: 2; /* Ensure it appears above the video */
+  color: white;
+  text-align: right;
+  letter-spacing: 5px; /* Align text to the right */
 }
 
 .shape5 {
-    position: absolute;
-    top: -24px;
-    left: 0px;
+  position: absolute;
+  top: -24px;
+  left: 0px;
 }
 
 .shape6 {
-    position: absolute;
-    top: -24px;
-    right: 0px;
+  position: absolute;
+  top: -24px;
+  right: 0px;
 }
-.categoryItem{
-    list-style: none;
-    text-decoration: none;
+.categoryItem {
+  list-style: none;
+  text-decoration: none;
 }
-.categoryItem:hover{
-    letter-spacing: 10px;
+.categoryItem:hover {
+  letter-spacing: 10px;
 }
-.textOverlayImage{
-    font-size: 80px;
+.textOverlayImage {
+  font-size: 80px;
 }
 @media screen and (max-width: 768px) {
-    .textOverlay {
-        font-size: 40px;
-        left: 20px;
-    }
-    .categoryOverlay {
-        right: 20px;
-        bottom: 20px;
-    }
-    .categoryItem{
-        font-size: 16px;
-    }
-    .textOverlayImage{
-        font-size: 50px;
-    }
-    
+  .textOverlay {
+    font-size: 40px;
+    left: 20px;
+  }
+  .categoryOverlay {
+    right: 20px;
+    bottom: 20px;
+  }
+  .categoryItem {
+    font-size: 16px;
+  }
+  .textOverlayImage {
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .textOverlay {
-        font-size: 40px;
-        left: 20px;
-    }
-    .categoryOverlay {
-        right: 20px;
-        bottom: 20px;
-    }
-    .textOverlayImage{
-        font-size: 20px;
-    }
+  .textOverlay {
+    font-size: 40px;
+    left: 20px;
+  }
+  .categoryOverlay {
+    right: 20px;
+    bottom: 20px;
+  }
+  .textOverlayImage {
+    font-size: 20px;
+  }
 
-    .categoryItem{
-        font-size: 12px;
-    }
-    
+  .categoryItem {
+    font-size: 12px;
+  }
 }

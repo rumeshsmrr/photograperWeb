@@ -41,8 +41,8 @@ const Navbar = () => {
     <>
       {/* Desktop Nav */}
       <nav className="navbar p-0 m-0 font-regular hidden lg:flex">
-        <div className="whiteBar"></div>
-        <div className="navPart1 bg-white">
+        <div className="whiteBar bg-bgDark"></div>
+        <div className="navPart1 bg-bgDark">
           <img className="logo" src={logo} alt="Logo" />
           <ul className="navbar-links font-bold">
             {links.slice(0, -1).map(({ name, to }, index) => (
@@ -67,10 +67,10 @@ const Navbar = () => {
             <div id="curved-corner-topright"></div>
           </div>
         </div>
-        <div className="navPart2 bg-white">
+        <div className="navPart2 bg-bgDark">
           <Link
             to="#contact"
-            className="contact-btn bg-blackBlue text-white hover:bg-accent flex justify-center items-center"
+            className="contact-btn tracking-widest bg-accent text-white hover:bg-blackBlue flex justify-center items-center text-lg font-bold"
           >
             Contact Us
           </Link>
@@ -84,8 +84,8 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Nav */}
-      <nav className="mobileNav w-screen fixed z-10 flex justify-between h-fit items-center lg:hidden bg-white">
-        <div className="mobileNavPart1 w-2/4 h-[62px] bg-white p-3">
+      <nav className="mobileNav w-screen fixed z-10 flex justify-between h-fit items-center lg:hidden bg-bgDark">
+        <div className="mobileNavPart1 w-2/4 h-[62px] bg-bgDark p-3">
           <img className="logo" src={logo} alt="Logo" />
         </div>
         <div className="w-1/4 h-[62px] relative">
@@ -96,14 +96,16 @@ const Navbar = () => {
             <div id="curved-corner-topright"></div>
           </div>
         </div>
-        <div className="p-4 w-1/4 h-[62px] bg-white flex justify-center items-center">
+        <div className="p-4 w-1/4 h-[62px] bg-bgDark flex justify-center items-center">
           <div
             className="mobileNavMenu cursor-pointer"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           >
             <IoArrowDownCircleOutline
               className={`text-3xl transform transition-transform duration-300 ${
-                isMobileMenuOpen ? "rotate-180 text-accent" : "rotate-45"
+                isMobileMenuOpen
+                  ? "rotate-180 text-accent"
+                  : "rotate-45 text-accent"
               }`}
             />
           </div>
@@ -119,7 +121,7 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <motion.div
-          className="fixed inset-x-0 w-screen top-[62px] h-[30vh] bg-white flex flex-col items-center justify-center z-20 shadow-md rounded-b-lg"
+          className="fixed inset-x-0 w-screen top-[62px] h-[30vh] bg-bgDark flex flex-col text-white items-center justify-center z-20 shadow-md rounded-b-lg"
           animate={isMobileMenuOpen ? "open" : "closed"}
           variants={menuVariants}
           initial="closed"
