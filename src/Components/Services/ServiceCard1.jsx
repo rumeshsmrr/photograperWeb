@@ -1,8 +1,15 @@
-import PropTypes from 'prop-types';
-import { IoArrowForwardCircleOutline } from 'react-icons/io5';
-import { motion } from 'framer-motion';
+import PropTypes from "prop-types";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
-export default function ServiceCard1({ title, price, features, image, index, delay }) {
+export default function ServiceCard1({
+  title,
+  price,
+  features,
+  image,
+  index,
+  delay,
+}) {
   return (
     <motion.div
       className="w-full h-[175px]  rounded-3xl text-end bg-slate-800 text-white font-boldq relative mt-4 cursor-pointer"
@@ -15,9 +22,10 @@ export default function ServiceCard1({ title, price, features, image, index, del
         style={{ backgroundImage: `url(${image})` }}
       ></div>
       <motion.div
-        className="absolute w-full h-full bg-transparent rounded-3xl serviceDes z-10 top-0"
+        className="absolute w-full h-full bg-transparent rounded-3xl serviceDes top-0"
+        style={{ zIndex: 5 }}
         initial={{ opacity: 0, scaleY: 0.8 }}
-        whileHover={{ opacity: 1, visibility: 'visible', scaleY: 1 }}
+        whileHover={{ opacity: 1, visibility: "visible", scaleY: 1 }}
         transition={{ duration: 0.3 }}
       >
         <motion.div
@@ -27,9 +35,14 @@ export default function ServiceCard1({ title, price, features, image, index, del
           transition={{ duration: 0.5 }}
         >
           <p className="mt-1 flex items-baseline gap-x-2">
-            <span className="text-xl font-simple tracking-tight mb-3 text-white">{price}</span>
+            <span className="text-xl font-simple tracking-tight mb-3 text-white">
+              {price}
+            </span>
           </p>
-          <ul role="list" className="mt-4 font-simple space-y-3 text-start leading-6 text-gray-300 sm:mt-1">
+          <ul
+            role="list"
+            className="mt-4 font-simple space-y-3 text-start leading-6 text-gray-300 sm:mt-1"
+          >
             {features.map((feature) => (
               <li className="flex gap-x-3 items-start" key={feature}>
                 <IoArrowForwardCircleOutline className="text-accent -rotate-45 text-wrap text-sm" />
@@ -40,9 +53,13 @@ export default function ServiceCard1({ title, price, features, image, index, del
         </motion.div>
       </motion.div>
       {index % 2 === 0 ? (
-        <div className="absolute top-6 left-6 tracking-widest lg:text-5xl sm:text-3xl  ">{title}</div>
+        <div className="absolute top-6 left-6 tracking-widest lg:text-5xl sm:text-3xl  ">
+          {title}
+        </div>
       ) : (
-        <div className="absolute top-6 right-6 tracking-widest lg:text-5xl sm:text-lg ">{title}</div>
+        <div className="absolute top-6 right-6 tracking-widest lg:text-5xl sm:text-lg ">
+          {title}
+        </div>
       )}
     </motion.div>
   );
