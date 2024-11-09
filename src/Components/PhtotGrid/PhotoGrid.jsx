@@ -2,20 +2,18 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import img1 from "../../assets/images/photo1.jpg";
-import img2 from "../../assets/images/photo2.jpeg";
-import img3 from "../../assets/images/photo3.jpeg";
-import img4 from "../../assets/images/photo4.jpeg";
-import img5 from "../../assets/images/photo5.jpeg";
-import img6 from "../../assets/images/photo6.jpg";
-import img7 from "../../assets/images/photo7.jpeg";
-import img8 from "../../assets/images/photo8.png";
-import img9 from "../../assets/images/photo9.jpeg";
-import img10 from "../../assets/images/photo10.jpg";
-import img11 from "../../assets/images/photo11.jpg";
-import img12 from "../../assets/images/photo12.png";
-import img14 from "../../assets/images/photo14.png";
-import img15 from "../../assets/images/photo15.jpg";
-import img16 from "../../assets/images/photo16.jpg";
+import img2 from "../../assets/images/photo2.png";
+import img3 from "../../assets/images/photoO7.png";
+import img4 from "../../assets/images/photoO1.jpg";
+import img5 from "../../assets/images/photoO6.png";
+import img6 from "../../assets/images/photoO8.jpg";
+import img7 from "../../assets/images/photoO9.jpg";
+import img8 from "../../assets/images/photoO10.jpg";
+import img9 from "../../assets/images/photoO11.jpeg";
+import img10 from "../../assets/images/photoO12.jpeg";
+import img11 from "../../assets/images/photoO13.jpeg";
+import img12 from "../../assets/images/photoO14.jpg";
+import img14 from "../../assets/images/photoO15.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,8 +31,6 @@ const cards = [
   img11,
   img12,
   img14,
-  img15,
-  img16,
 ];
 
 export default function PhotoGrid() {
@@ -67,9 +63,9 @@ export default function PhotoGrid() {
   return (
     <div
       id="photoGrid"
-      className="overflow-hidden ml-2 mt-10 px-4 md:px-10 relative"
+      className="overflow-hidden  ml-2 mt-10 px-4 md:px-10 relative"
     >
-      <div className="font-regular text-[30px] mb-10 titleLineSpace">
+      <div className="font-regular text-[30px] mb-10 text-white titleLineSpace">
         Showcasing our <br /> best
         <span className="text-accent"> work</span>
       </div>

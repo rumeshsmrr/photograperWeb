@@ -14,7 +14,7 @@ export default function Categories() {
     >
       {/* Title with whileInView animation */}
       <motion.div
-        className="font-regular text-[30px] mb-10 titleLineSpace"
+        className="font-regular text-[30px] mb-10 text-white titleLineSpace"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0 }}
@@ -45,7 +45,7 @@ export default function Categories() {
                 transition: { duration: 0.2 },
               }}
             />
-            <div className="cardCorner bg-white text-[30px] md:text-[50px] absolute top-0 right-0 text-accent">
+            <div className="cardCorner bg-bgDark text-[30px] md:text-[50px] absolute top-0 right-0 text-accent">
               <IoArrowForwardCircleOutline className="-rotate-45 hover:text-black" />
               <div className="shape7">
                 <div id="curved-corner-topright"></div>
@@ -54,15 +54,15 @@ export default function Categories() {
                 <div id="curved-corner-topright"></div>
               </div>
             </div>
-            <div className="catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-white absolute bottom-0 rounded-tr-3xl">
+            <div className="catTag1 pt-2 pb-0 pl-0 pr-2 w-fit bg-bgDark absolute bottom-0 rounded-tr-3xl">
               <div className="absolute -top-6 left-0">
-                <div id="curved-corner-bottomleft"></div>
+                <div id="curved-corner-bottomleft-dark"></div>
               </div>
-              <div className="font-regular text-xl text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl">
+              <div className="font-regular text-xl text-accent bg-bgDark py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl tracking-widest">
                 Wedding
               </div>
               <div className="absolute bottom-0 -right-6">
-                <div id="curved-corner-bottomleft"></div>
+                <div id="curved-corner-bottomleft-dark"></div>
               </div>
             </div>
           </motion.div>
@@ -81,17 +81,17 @@ export default function Categories() {
               alt="wedding"
             />
             <motion.div
-              className="absolute inset-0 bg-white opacity-0"
+              className="absolute inset-0 bg-bgDark opacity-0"
               initial={{ opacity: 0 }}
               whileHover={{
                 opacity: [0, 0.8, 0],
                 transition: { duration: 0.5 },
               }}
             />
-            <div className="cardCorner bg-white  absolute top-0 right-0 text-accent flex justify-end gap-2 items-center">
-              <div className="pt-0 pb-0 pl-1 pr-2 w-fit bg-white">
-                <div className="font-regular lg:text-xl md:text-lg sm:text-sm py-1 text-accent bg-white border-solid border-accent border-2 w-[200px] text-center rounded-3xl">
-                  Portrait
+            <div className="cardCorner bg-bgDark  absolute top-0 right-0 text-accent flex justify-end gap-2 items-center">
+              <div className="pt-0 pb-0 pl-1 pr-2 w-fit bg-bgDark">
+                <div className="font-regular lg:text-xl md:text-lg sm:text-sm py-1 text-accent bg-bgDark border-solid border-accent border-2 tracking-widest w-[200px] text-center rounded-3xl">
+                  Engagement
                 </div>
               </div>
               <IoArrowForwardCircleOutline className="-rotate-45 text-3xl hover:text-black" />
@@ -118,14 +118,14 @@ export default function Categories() {
               alt="wedding"
             />
             <motion.div
-              className="absolute inset-0 bg-white opacity-0"
+              className="absolute inset-0 bg-bgDark opacity-0"
               initial={{ opacity: 0 }}
               whileHover={{
                 opacity: [0, 0.8, 0],
                 transition: { duration: 0.5 },
               }}
             />
-            <div className="cardCorner bg-white text-[30px] md:text-[50px] absolute top-0 right-0 text-accent">
+            <div className="cardCorner bg-bgDark text-[30px] md:text-[50px] absolute top-0 right-0 text-accent">
               <IoArrowForwardCircleOutline className="-rotate-45 hover:text-black" />
               <div className="shape7">
                 <div id="curved-corner-topright"></div>
@@ -134,15 +134,15 @@ export default function Categories() {
                 <div id="curved-corner-topright"></div>
               </div>
             </div>
-            <div className="catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-white absolute bottom-0 right-0 rounded-tl-3xl">
+            <div className="catTag1 pt-2 pb-0 pl-2 pr-0 w-fit bg-bgDark absolute bottom-0 right-0 rounded-tl-3xl">
               <div className="absolute bottom-0 -left-6">
                 <div id="curved-corner-bottomright"></div>
               </div>
               <div
                 className="font-regular lg:text-xl md:text-lg sm:text-lg
-             text-accent bg-white py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl"
+             text-accent bg-bgDark py-1 border-solid border-accent border-2 w-[200px] text-center rounded-3xl tracking-widest"
               >
-                Landscape
+                Portrait
               </div>
               <div className="absolute -top-6 right-0">
                 <div id="curved-corner-bottomright"></div>

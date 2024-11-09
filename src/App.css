@@ -1,18 +1,61 @@
-root{
-    padding: 0;
-    margin: 0;
-    background-color: white;
-
+root {
+  padding: 0;
+  margin: 0;
+  background-color: white;
 }
 
-body{
-    padding: 0;
-    margin: 0;
- 
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.titleLineSpace{
-line-height: 60px;
+.titleLineSpace {
+  line-height: 60px;
 }
 /* App.css */
 
+#curved-corner-bottomleft-dark,
+#curved-corner-bottomright-dark,
+#curved-corner-topleft-dark,
+#curved-corner-topright-dark {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+#curved-corner-bottomleft-dark:before,
+#curved-corner-bottomright-dark:before,
+#curved-corner-topleft-dark:before,
+#curved-corner-topright-dark:before {
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#curved-corner-bottomleft-dark:before {
+  bottom: 0;
+  left: 0;
+  box-shadow: -24px 24px 0 0 #2d2d2d;
+}
+
+#curved-corner-bottomright-dark:before {
+  bottom: 0;
+  right: 0;
+  box-shadow: 24px 24px 0 0 #2d2d2d;
+}
+
+#curved-corner-topleft-dark:before {
+  top: 0;
+  left: 0;
+  box-shadow: -24px -24px 0 0 #2d2d2d;
+}
+
+#curved-corner-topright-dark:before {
+  top: 0;
+  right: 0;
+  box-shadow: 24px -24px 0 0 #2d2d2d;
+}
