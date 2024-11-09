@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         regular: ["regular", "serif"],
         stylish: ["stylish", "serif"],
-        bold: ["bold", "serif"],
+
         boldq: ["boldq", "sans-serif"],
         simple: ["simple", "sans-serif"],
         semiStyled: ["semiStyled", "sans-serif"],

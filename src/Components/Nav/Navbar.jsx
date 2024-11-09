@@ -40,11 +40,11 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Nav */}
-      <nav className="navbar p-0 m-0 font-regular hidden lg:flex">
+      <nav className="navbar p-0 m-0 font-stylish hidden lg:flex">
         <div className="whiteBar bg-bgDark"></div>
         <div className="navPart1 bg-bgDark">
           <img className="logo" src={logo} alt="Logo" />
-          <ul className="navbar-links font-bold">
+          <ul className="navbar-links tracking-widest">
             {links.slice(0, -1).map(({ name, to }, index) => (
               <motion.a
                 key={name}
@@ -70,7 +70,7 @@ const Navbar = () => {
         <div className="navPart2 bg-bgDark">
           <Link
             to="#contact"
-            className="contact-btn tracking-widest bg-accent text-white hover:bg-blackBlue flex justify-center items-center text-lg font-bold"
+            className="contact-btn tracking-widest bg-accent text-blackBlue hover:bg-blackBlue flex justify-center items-center text-lg font-stylish font-bold"
           >
             Contact Us
           </Link>

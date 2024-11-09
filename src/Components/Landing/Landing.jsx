@@ -31,7 +31,7 @@ export default function Landing() {
         </motion.div>  */}
 
         <motion.div
-          className="textOverlay font-stylish flex items-end"
+          className="textOverlay font-stylish  flex items-end"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 0.8 }}
           transition={{ duration: 0.5, delay: 0 }}
@@ -40,17 +40,11 @@ export default function Landing() {
           create <br />
           your story <br />
           together!
-          <span className="textOverlayImage">
-            <FaArrowUp className="w-10 rotate-45" />
-          </span>
         </motion.div>
 
-        <div className="categoryOverlay font-bold font-semibold text-white relative text-[20px] cursor-pointer opacity-75 text-right">
+        {/* <div className="categoryOverlay font-bold font-semibold text-white relative text-[20px] cursor-pointer opacity-75 text-right">
           <div className="w-fit p-2 flex flex-col gap-10">
-            {/* <div className="categoryItem hover:text-accent">Wedding</div>
-            <div className="categoryItem hover:text-accent">Birthday</div>
-            <div className="categoryItem hover:text-accent">Graduation</div>
-            <div className="categoryItem hover:text-accent">Corporate</div>  */}
+          
             {categories.map((category, index) => (
               <motion.li
                 key={category}
@@ -66,7 +60,7 @@ export default function Landing() {
               </motion.li>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative bottom-5 h-5 bg-bgDark">
