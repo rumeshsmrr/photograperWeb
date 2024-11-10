@@ -10,7 +10,7 @@ export default function Services() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1000);
+      setIsMobile(window.innerWidth <= 1366);
     };
 
     handleResize(); // Set initial state
@@ -22,7 +22,7 @@ export default function Services() {
   return (
     <div
       id="services"
-      className="pt-2 pl-10 pr-10 pb-10 mt-10 bg-inherit w-full h-screen flex flex-col justify-center"
+      className="pt-2 pl-10 pr-10 pb-10 mt-10 bg-inherit w-full h-fit  flex flex-col justify-center"
     >
       <motion.div
         className="font-regular text-[30px] mb-4 text-white titleLineSpace"

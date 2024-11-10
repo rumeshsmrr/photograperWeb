@@ -66,7 +66,7 @@ export default function Reviews() {
   return (
     <div
       id="reviews"
-      className="pt-2 px-4 md:px-10 mt-10 bg-inherit w-full h-screen mb-10 flex flex-col justify-center"
+      className="pt-2 px-4 md:px-10 mt-10 bg-inherit w-full h-fit mb-10 flex flex-col justify-center"
     >
       {/* Title with whileInView animation */}
       <motion.div
@@ -80,11 +80,11 @@ export default function Reviews() {
 
       {/* Automatic slider for review cards */}
       <motion.div
-        className="overflow-hidden w-full h-full relative"
+        className="overflow-hidden w-fit h-[700px] relative"
         style={{ cursor: "grab" }}
       >
         <motion.div
-          className="flex gap-6 w-full lg:h-[550px]"
+          className="flex gap-6 w-fit lg:h-[550px]"
           animate={controls}
           onHoverStart={handleHoverStart}
           onHoverEnd={handleHoverEnd}

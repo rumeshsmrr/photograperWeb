@@ -10,7 +10,7 @@ export default function MobileCard({ title, packages, image, index, delay }) {
   // Detect if the device is mobile
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1000); // Update isMobile based on window size
+      setIsMobile(window.innerWidth <= 1366); // Update isMobile based on window size
     };
     handleResize(); // Set initial state
     window.addEventListener("resize", handleResize); // Add resize listener
@@ -26,7 +26,7 @@ export default function MobileCard({ title, packages, image, index, delay }) {
 
   return (
     <motion.div
-      className="w-full h-[250px] rounded-3xl text-end bg-slate-600 text-white relative mt-4 cursor-pointer"
+      className="w-full h-[120px] rounded-3xl text-end bg-slate-600 text-white relative mt-4 cursor-pointer"
       initial={{ x: 100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: delay }}
@@ -38,7 +38,7 @@ export default function MobileCard({ title, packages, image, index, delay }) {
       ></div>
 
       <motion.div
-        className="absolute w-full h-full bg-transparent rounded-3xl serviceDes top-0"
+        className="relative w-full h-full bg-transparent rounded-3xl serviceDes top-0"
         style={{ zIndex: 5 }}
         initial={{ opacity: 0, scaleY: 0.8 }}
         animate={
