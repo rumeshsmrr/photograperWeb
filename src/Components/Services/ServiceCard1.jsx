@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function ServiceCard1({ title, packages, image, index, delay }) {
   return (
     <motion.div
-      className="w-full  h-[250px] rounded-3xl text-end bg-slate-600 text-white relative mt-4 cursor-pointer"
+      className="w-full  h-[150px] rounded-3xl text-end bg-slate-600 text-white relative mt-4 cursor-pointer"
       initial={{ x: 100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: delay }}

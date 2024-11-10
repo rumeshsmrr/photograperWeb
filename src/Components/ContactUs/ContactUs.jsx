@@ -84,11 +84,11 @@ export default function ContactUs() {
         </div>
         <div className="w-full flex justify-center">
           <div className="flex justify-between gap-2 font-semiStyled w-10/12 tracking-widest">
-            <div className="bg-blackBlue text-white py-2 rounded-3xl px-8 text-sm w-fit h-fit cursor-pointer hover:bg-accent hover:text-blackBlue">
+            <div className="bg-blackBlue text-white py-2 rounded-3xl px-8 text-xs md:text-smw-fit h-fit cursor-pointer hover:bg-accent hover:text-blackBlue">
               <a href="tel:+94769438482">Call Us</a>{" "}
               {/* Link to make a phone call */}
             </div>
-            <div className="bg-blackBlue text-white py-2 rounded-3xl px-8 text-sm w-fit h-fit cursor-pointer hover:bg-accent hover:text-blackBlue ">
+            <div className="bg-blackBlue text-white py-2 rounded-3xl px-5 md:px-8 text-xs md:text-sm w-fit h-fit cursor-pointer hover:bg-accent hover:text-blackBlue ">
               <a href="mailto:legendartck@gmail.com">Email Us</a>{" "}
               {/* Link to email */}
             </div>
