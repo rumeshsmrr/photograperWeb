@@ -1,42 +1,66 @@
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import reviewData from "./reviewData";
-
 import quatation from "../../assets/images/quote.png";
 
 export default function Reviews() {
   const controls = useAnimation();
+  const [activeIndex, setActiveIndex] = useState(null); // Track active card for mobile
 
   useEffect(() => {
-    controls.start({
-      x: -1000, // Adjust based on content width
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 20, // Sliding speed
-          ease: "linear",
+    if (activeIndex === null) {
+      controls.start({
+        x: -1000, // Adjust based on content width
+        transition: {
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20, // Sliding speed
+            ease: "linear",
+          },
         },
-      },
-    });
-  }, [controls]);
+      });
+    }
+  }, [controls, activeIndex]);
 
   const handleHoverStart = () => {
     controls.stop();
   };
 
   const handleHoverEnd = () => {
-    controls.start({
-      x: -1000,
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 20,
-          ease: "linear",
+    if (activeIndex === null) {
+      controls.start({
+        x: -1000,
+        transition: {
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20,
+            ease: "linear",
+          },
         },
-      },
-    });
+      });
+    }
+  };
+
+  const handleCardClick = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null); // Deactivate if the same card is clicked again
+      controls.start({
+        x: -1000,
+        transition: {
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20,
+            ease: "linear",
+          },
+        },
+      });
+    } else {
+      setActiveIndex(index); // Activate the clicked card
+      controls.stop(); // Stop the scroll animation on mobile
+    }
   };
 
   return (
@@ -65,15 +89,17 @@ export default function Reviews() {
           onHoverStart={handleHoverStart}
           onHoverEnd={handleHoverEnd}
         >
-          {reviewData.map((review) => (
+          {reviewData.map((review, index) => (
             <motion.div
               key={review.index}
               className="group relative p-4 "
               style={{ zIndex: 3 }}
+              onClick={() => handleCardClick(index)} // Handle click for mobile
             >
               <motion.div
                 className="reviewCard w-[300px] h-[400px] rounded-3xl relative bg-blue-300 overflow-visible"
                 whileHover={{ rotate: -20, y: 20 }}
+                animate={activeIndex === index ? { rotate: -20, y: 20 } : {}}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <img
@@ -84,6 +110,7 @@ export default function Reviews() {
                 <motion.div
                   className="w-full min-h-full absolute bg-secondAccent text-blackBlue p-5 rounded-3xl reviewContainer flex flex-col justify-between"
                   whileHover={{ rotate: 25, y: 100 }}
+                  animate={activeIndex === index ? { rotate: 25, y: 100 } : {}}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   <div className="text-xl font-regular tracking-tight w-80% text-wrap h-auto">
