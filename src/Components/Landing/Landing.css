@@ -95,3 +95,21 @@
     font-size: 12px;
   }
 }
+
+@media screen and (max-width: 770px) {
+  .textOverlay {
+    font-size: 50px;
+    left: 20px;
+    line-height: 80px;
+  }
+  .categoryOverlay {
+    right: 20px;
+    bottom: 20px;
+  }
+  .textOverlayImage {
+    font-size: 20px;
+  }
+  .categoryItem {
+    font-size: 12px;
+  }
+}
