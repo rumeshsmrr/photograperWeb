@@ -133,6 +133,7 @@ const Navbar = () => {
                 key={links.name}
                 to={links.to}
                 className="cursor-pointer hover:text-accent"
+                onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
               >
                 {links.name}
               </Link>
