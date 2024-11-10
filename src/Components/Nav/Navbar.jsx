@@ -44,12 +44,12 @@ const Navbar = () => {
         <div className="whiteBar bg-bgDark"></div>
         <div className="navPart1 bg-bgDark">
           <img className="logo" src={logo} alt="Logo" />
-          <ul className="navbar-links tracking-widest">
+          <ul className="navbar-links tracking-widest ">
             {links.slice(0, -1).map(({ name, to }, index) => (
               <motion.a
                 key={name}
                 href={to}
-                className="link-nav"
+                className="link-nav hover:text-accent"
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
@@ -84,7 +84,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Nav */}
-      <nav className="mobileNav w-screen fixed z-10 flex justify-between h-fit items-center lg:hidden bg-bgDark">
+      <nav className="mobileNav font-stylish w-screen fixed z-10 flex justify-between h-fit items-center lg:hidden bg-bgDark">
         <div className="mobileNavPart1 w-2/4 h-[62px] bg-bgDark p-3">
           <img className="logo" src={logo} alt="Logo" />
         </div>
@@ -121,7 +121,7 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <motion.div
-          className="fixed inset-x-0 w-screen top-[62px] h-[30vh] bg-bgDark flex flex-col text-white items-center justify-center z-20 shadow-md rounded-b-lg"
+          className="fixed font-stylish mb-2 inset-x-0 w-screen top-[62px] h-full bg-bgDark flex flex-col text-white items-center justify-center z-20 shadow-md rounded-b-lg"
           animate={isMobileMenuOpen ? "open" : "closed"}
           variants={menuVariants}
           initial="closed"
