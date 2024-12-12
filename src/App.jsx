@@ -9,6 +9,7 @@ import Reviews from "./Components/Reviews/Reviews";
 import Services from "./Components/Services/Services";
 import PhotoGrid from "./Components/PhtotGrid/PhotoGrid";
 import Aboutus from "./Components/AboutUs/Aboutus";
+import Google from "./Components/Google/Google";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Reviews />
           <Aboutus />
           <ContactUs />
+          <Google />
           <Footer />
         </div>
       </BrowserRouter>
