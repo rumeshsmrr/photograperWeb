@@ -21,11 +21,11 @@
   left: 80px;
   z-index: 1;
   color: white;
-  line-height: 1.2;
+  line-height: 1;
   top: 20%;
   transform: translateY(-50%);
   opacity: 0.6;
-  letter-spacing: 20px; /* Adjust this as needed */
+  letter-spacing: 5px; /* Adjust this as needed */
   font-size: 80px;
   line-height: 120px;
 }
