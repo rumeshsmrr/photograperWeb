@@ -80,7 +80,7 @@ export default function Reviews() {
 
       {/* Automatic slider for review cards */}
       <motion.div
-        className="overflow-hidden w-fit h-[700px] relative"
+        className="overflow-y-hidden w-fit h-[580px] relative"
         style={{ cursor: "grab" }}
       >
         <motion.div
@@ -108,7 +108,7 @@ export default function Reviews() {
                   alt="Reviewer"
                 />
                 <motion.div
-                  className="w-full min-h-full absolute bg-secondAccent text-blackBlue p-5 rounded-3xl reviewContainer flex flex-col justify-between"
+                  className="w-full min-h-full z-10 absolute bg-secondAccent text-blackBlue p-5 rounded-3xl reviewContainer flex flex-col justify-between"
                   whileHover={{ rotate: 25, y: 100 }}
                   animate={activeIndex === index ? { rotate: 25, y: 100 } : {}}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
