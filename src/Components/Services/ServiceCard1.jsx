@@ -31,7 +31,7 @@ export default function ServiceCard1({ title, packages, image, index, delay }) {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-xl font-simple tracking-tight mb-3 text-white">
+              <h3 className="text-xl font-regular tracking-tight mb-3 text-white">
                 {pkg.packageName} - {pkg.price}
               </h3>
               <ul
