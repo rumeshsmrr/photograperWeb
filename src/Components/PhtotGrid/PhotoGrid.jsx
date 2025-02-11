@@ -5,6 +5,7 @@ import img1 from "../../assets/images/photo1.jpg";
 import img2 from "../../assets/images/photo2.png";
 import img3 from "../../assets/images/photoO7.png";
 import img4 from "../../assets/images/photoO1.jpg";
+import img15 from "../../assets/images/09.png";
 import img5 from "../../assets/images/photoO6.png";
 import img6 from "../../assets/images/photoO8.jpg";
 import img7 from "../../assets/images/photoO9.jpg";
@@ -14,6 +15,7 @@ import img10 from "../../assets/images/photoO12.jpeg";
 import img11 from "../../assets/images/photoO13.jpeg";
 import img12 from "../../assets/images/photoO14.jpg";
 import img14 from "../../assets/images/photoO15.png";
+import { img } from "framer-motion/client";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +26,7 @@ const cards = [
   img4,
   img5,
   img6,
+  img15,
   img7,
   img8,
   img9,
